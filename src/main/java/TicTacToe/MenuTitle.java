@@ -16,18 +16,6 @@ public class MenuTitle extends Pane {
             spread += c + " ";
         }
 
-        /*Polygon bg = new Polygon(
-                0, 0,
-                540, 0,
-                555, 30,
-                540, 50,
-                0, 50
-        );*/
-        /*bg.setStroke(Color.color(1, 1, 1, 0.75));
-        bg.setEffect(new GaussianBlur());
-        bg.setTranslateX(0);
-        bg.setTranslateY(-40);*/
-
         text = new Text(spread);
         text.setFont(Font.font("Verdana", 44));
         text.setFill(Color.WHITE);
