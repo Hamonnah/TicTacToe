@@ -1,5 +1,8 @@
-package TicTacToe;
+package TicTacToe.board;
 
+import TicTacToe.Game;
+import TicTacToe.logic.Computer;
+import TicTacToe.logic.GameState;
 import javafx.geometry.Pos;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -54,10 +57,8 @@ public class Tile extends StackPane {
                 turnX = true;
                 playable = GameState.getGameState().checkState();
             }
-
         });
     }
-
 
     public void playComputer() {
         if (computerTurn) {
@@ -101,18 +102,6 @@ public class Tile extends StackPane {
 
     public void setY(int y) {
         this.y = y;
-    }
-
-    public boolean isSelected() {
-        return isSelected;
-    }
-
-    public static boolean isPlayable() {
-        return playable;
-    }
-
-    public static void setPlayable(boolean playable) {
-        Tile.playable = playable;
     }
 
     public void drawX() {

@@ -1,4 +1,7 @@
-package TicTacToe;
+package TicTacToe.logic;
+
+import TicTacToe.Game;
+import TicTacToe.board.Tile;
 
 import java.util.List;
 
@@ -8,13 +11,9 @@ public class Computer {
 
     public static void computerPlay() {
 
-        if (Tile.isPlayable()) {
-            for (Tile tile : availableTiles) {
-                if (!tile.isSelected()) {
-                    tile.playComputer();
-                    break;
-                }
-            }
+        if (Minimax.hasFreeTiles()) {
+            Minimax.minimax(0, Game.Type.O);
+            Minimax.getComputerMove().playComputer();
         }
     }
 
