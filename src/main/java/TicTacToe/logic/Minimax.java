@@ -5,6 +5,7 @@ import TicTacToe.board.Tile;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Minimax {
 
@@ -12,9 +13,7 @@ public class Minimax {
     private static Tile[][] board = content.getBoard().getTiles();
     private static Tile computerMove;
 
-    public static Tile getComputerMove() {
-        return computerMove;
-    }
+
 
     public static List<Tile> getAvailableTiles () {
         List<Tile> availableTiles = new ArrayList<>();
@@ -27,6 +26,18 @@ public class Minimax {
             }
         }
         return availableTiles;
+    }
+
+    public static Tile getComputerMove() {
+        List<Tile> availableTiles = getAvailableTiles();
+        if (availableTiles.size() == 0) {
+            return null;
+        } else {
+            Random random = new Random();
+            int n = random.nextInt(availableTiles.size());
+
+            return availableTiles.get(n);
+        }
     }
 
     public static boolean hasFreeTiles() {

@@ -4,14 +4,17 @@ import TicTacToe.Game;
 import TicTacToe.board.Tile;
 
 import java.util.List;
+import java.util.Random;
 
 public class Computer {
 
     private static List<Tile> availableTiles =  Minimax.getAvailableTiles();
 
+
+
     public static void computerPlay() {
 
-        if (Minimax.hasFreeTiles()) {
+        if (!Minimax.hasFreeTiles()) {
             Minimax.minimax(0, Game.Type.O);
             Minimax.getComputerMove().playComputer();
         }
