@@ -1,4 +1,4 @@
-package TicTacToe;
+package TicTacToe.menu;
 
 import javafx.beans.binding.Bindings;
 import javafx.scene.effect.BoxBlur;

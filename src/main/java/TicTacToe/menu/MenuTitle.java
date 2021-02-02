@@ -1,4 +1,4 @@
-package TicTacToe;
+package TicTacToe.menu;
 
 import javafx.scene.effect.DropShadow;
 import javafx.scene.layout.Pane;

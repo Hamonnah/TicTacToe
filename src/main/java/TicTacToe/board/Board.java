@@ -1,4 +1,4 @@
-package TicTacToe;
+package TicTacToe.board;
 
 public class Board {
 

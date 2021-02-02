@@ -1,13 +1,12 @@
-package TicTacToe;
+package TicTacToe.logic;
+
+import TicTacToe.*;
 
 public class GameState {
 
     public static GameState gameState;
 
     private Content content;
-    private static boolean win;
-    private static boolean lost;
-    private static boolean draw;
 
     public static void init(Content content) {
         if (gameState == null) {
@@ -33,44 +32,29 @@ public class GameState {
                 content.playWinAnimation(combo);
                 if (combo.getTile(0).getValue() == Game.Type.X) {
                     Scores.won();
-                    setGameStatusFlags(true, false, false);
+                    setGameStatusFlags();
                 }
                 if (combo.getTile(0).getValue() == Game.Type.O) {
                     Scores.lost();
-                    setGameStatusFlags(false, true, false);
+                    setGameStatusFlags();
                 }
                 return false;
             }
 
             if (!Minimax.hasFreeTiles() && !combo.isComplete()) {
                 Scores.draw();
-                setGameStatusFlags(false, false, true);
+                setGameStatusFlags();
                 break;
             }
         }
         return true;
     }
 
-    public static void setGameStatusFlags(boolean gameWasWon, boolean gameWasLost, boolean gameWasDraw) {
-        GameState.win = gameWasWon;
-        GameState.lost = gameWasLost;
-        GameState.draw = gameWasDraw;
+    public static void setGameStatusFlags() {
     }
 
     public Content getContent() {
         return content;
-    }
-
-    public static boolean isWin() {
-        return win;
-    }
-
-    public static boolean isLost() {
-        return lost;
-    }
-
-    public static boolean isDraw() {
-        return draw;
     }
 
 }
