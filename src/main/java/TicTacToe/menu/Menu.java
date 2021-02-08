@@ -50,7 +50,6 @@ public class Menu {
             } else {
                 menuBox.getChildren().addAll(empty);
             }
-
         });
 
         root.getChildren().add(menuBox);

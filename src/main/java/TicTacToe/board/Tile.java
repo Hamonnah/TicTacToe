@@ -21,8 +21,6 @@ public class Tile extends StackPane {
     private final ImageView imageO = new ImageView(new Image("o-small.png"));
     private Game.Type value;
 
-    private int x, y;
-
     public Tile() {
         Rectangle border = new Rectangle(170, 180);
         border.setFill(null);
@@ -57,10 +55,8 @@ public class Tile extends StackPane {
                 turnX = true;
                 playable = GameState.getGameState().checkState();
             }
-
         });
     }
-
 
     public void playComputer() {
         if (computerTurn) {
@@ -78,10 +74,6 @@ public class Tile extends StackPane {
         return value;
     }
 
-    public void setValue(Game.Type value) {
-        this.value = value;
-    }
-
     public double getCenterX() {
         return getTranslateX() + 85;
     }
@@ -90,20 +82,10 @@ public class Tile extends StackPane {
         return getTranslateY() + 90;
     }
 
-    public int getX() {
-        return x;
+    public void setX() {
     }
 
-    public int getY() {
-        return y;
-    }
-
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    public void setY(int y) {
-        this.y = y;
+    public void setY() {
     }
 
     public boolean isSelected() {
