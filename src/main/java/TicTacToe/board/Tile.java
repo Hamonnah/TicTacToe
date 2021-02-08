@@ -114,10 +114,6 @@ public class Tile extends StackPane {
         return playable;
     }
 
-    public static void setPlayable(boolean playable) {
-        Tile.playable = playable;
-    }
-
     public void drawX() {
         getChildren().add(imageX);
         value = Game.Type.X;

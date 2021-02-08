@@ -58,7 +58,7 @@ public class Game extends Application {
         GameState.newGame(content);
         Tile.setDefaultValues();
         CombosList.setDefaultValues();
-        Minimax.setDefaultValues();
+        GameAlgorithm.setDefaultValues();
         Computer.setDefaultValues();
         gameScene = new Scene(content.getRoot());
         content.getRoot().getChildren().add(btnBackToMenu);
