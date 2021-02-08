@@ -56,7 +56,7 @@ public class Game extends Application {
         GameState.newGame(content);
         Tile.setDefaultValues();
         CombosList.setDefaultValues();
-        GameAlgorithm.setDefaultValues();
+        FreeTilesChecker.setDefaultValues();
         Computer.setDefaultValues();
         gameScene = new Scene(content.getRoot());
         content.getRoot().getChildren().add(btnBackToMenu);

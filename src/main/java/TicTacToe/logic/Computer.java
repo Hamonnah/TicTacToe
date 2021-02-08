@@ -3,25 +3,25 @@ package TicTacToe.logic;
 import TicTacToe.board.Tile;
 
 import java.util.List;
+import java.util.Random;
 
 public class Computer {
 
-    private static List<Tile> availableTiles =  GameAlgorithm.getAvailableTiles();
+    private static List<Tile> availableTiles =  FreeTilesChecker.getAvailableTiles();
+    private static Random random = new Random();
 
     public static void computerPlay() {
 
         if (Tile.isPlayable()) {
-            for (Tile tile : availableTiles) {
-                if (!tile.isSelected()) {
-                    tile.playComputer();
-                    break;
-                }
-            }
+            setDefaultValues();
+            int freeTiles = availableTiles.size();
+            int selectedTile = random.nextInt(freeTiles);
+            availableTiles.get(selectedTile).playComputer();
         }
     }
 
     public static void setDefaultValues() {
-        availableTiles =  GameAlgorithm.getAvailableTiles();
+        availableTiles =  FreeTilesChecker.getAvailableTiles();
     }
 
 }
