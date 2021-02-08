@@ -1,4 +1,11 @@
-package TicTacToe;
+package TicTacToe.logic;
+
+import TicTacToe.Game;
+import TicTacToe.board.Tile;
+import TicTacToe.logic.Combo;
+import TicTacToe.logic.CombosList;
+import TicTacToe.logic.Content;
+import TicTacToe.logic.GameState;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,5 +1,8 @@
 package TicTacToe;
 
+import TicTacToe.board.Tile;
+import TicTacToe.logic.*;
+import TicTacToe.menu.Menu;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.Scene;
@@ -61,7 +64,7 @@ public class Game extends Application {
         content.getRoot().getChildren().add(btnBackToMenu);
     }
 
-    enum Type {
+    public enum Type {
         X, O, EMPTY
     }
 

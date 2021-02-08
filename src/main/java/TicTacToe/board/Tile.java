@@ -1,5 +1,8 @@
-package TicTacToe;
+package TicTacToe.board;
 
+import TicTacToe.logic.Computer;
+import TicTacToe.Game;
+import TicTacToe.logic.GameState;
 import javafx.geometry.Pos;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;

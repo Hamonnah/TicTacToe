@@ -1,4 +1,6 @@
-package TicTacToe;
+package TicTacToe.logic;
+
+import TicTacToe.Game;
 
 public class GameState {
 
