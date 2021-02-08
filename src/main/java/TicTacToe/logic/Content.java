@@ -1,5 +1,8 @@
-package TicTacToe;
+package TicTacToe.logic;
 
+import TicTacToe.Game;
+import TicTacToe.board.Board;
+import TicTacToe.board.Tile;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;

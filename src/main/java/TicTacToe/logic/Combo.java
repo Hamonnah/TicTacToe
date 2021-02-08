@@ -1,4 +1,7 @@
-package TicTacToe;
+package TicTacToe.logic;
+
+import TicTacToe.Game;
+import TicTacToe.board.Tile;
 
 public class Combo {
 

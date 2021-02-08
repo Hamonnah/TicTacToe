@@ -1,10 +1,12 @@
-package TicTacToe;
+package TicTacToe.logic;
+
+import TicTacToe.board.Tile;
 
 import java.util.List;
 
 public class Computer {
 
-    private static List<Tile> availableTiles =  Minimax.getAvailableTiles();
+    private static List<Tile> availableTiles =  GameAlgorithm.getAvailableTiles();
 
     public static void computerPlay() {
 
@@ -19,7 +21,7 @@ public class Computer {
     }
 
     public static void setDefaultValues() {
-        availableTiles =  Minimax.getAvailableTiles();
+        availableTiles =  GameAlgorithm.getAvailableTiles();
     }
 
 }

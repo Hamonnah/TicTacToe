@@ -1,5 +1,8 @@
 package TicTacToe;
 
+import TicTacToe.board.Tile;
+import TicTacToe.logic.*;
+import TicTacToe.menu.Menu;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.Scene;
@@ -11,14 +14,12 @@ import javafx.util.Pair;
 public class Game extends Application {
 
     private Content content = new Content();
-    private Menu menu = new Menu();
-    private Menu scores = new Menu();
+    private final Menu menu = new Menu();
 
-    private Scene menuScene = new Scene(menu.getRoot());
+    private final Scene menuScene = new Scene(menu.getRoot());
     private Scene gameScene = new Scene(content.getRoot());
-    private Scene scoreScene = new Scene(scores.getRoot());
 
-    private Button btnBackToMenu = new Button("MENU");
+    private final Button btnBackToMenu = new Button("MENU");
 
     @Override
     public void start(Stage primaryStage) {
@@ -55,13 +56,13 @@ public class Game extends Application {
         GameState.newGame(content);
         Tile.setDefaultValues();
         CombosList.setDefaultValues();
-        Minimax.setDefaultValues();
+        GameAlgorithm.setDefaultValues();
         Computer.setDefaultValues();
         gameScene = new Scene(content.getRoot());
         content.getRoot().getChildren().add(btnBackToMenu);
     }
 
-    enum Type {
+    public enum Type {
         X, O, EMPTY
     }
 

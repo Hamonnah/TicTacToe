@@ -1,4 +1,4 @@
-package TicTacToe;
+package TicTacToe.menu;
 
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
@@ -50,7 +50,6 @@ public class Menu {
             } else {
                 menuBox.getChildren().addAll(empty);
             }
-
         });
 
         root.getChildren().add(menuBox);
